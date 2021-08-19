@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "concurrently \"cd hello-world && yarn\" \"cd mmbizwxanodep6n && yarn\" \"cd vite-child && yarn\" ",
+    "init": "yarn && concurrently \"cd hello-world && yarn\" \"cd my-ssr && yarn\" \"cd vite-child && yarn\" ",
     "dev": "concurrently \"cd hello-world && npm run serve\" \"cd my-ssr && npm start\" \"cd vite-child && npm run dev\" "
   },
   "author": "",
