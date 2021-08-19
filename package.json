@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "concurrently \"cd hello-world && yarn\" \"cd mmbizwxanodep6n && yarn\" \"cd vite-child && yarn\" ",
+    "dev": "concurrently \"cd hello-world && npm run serve\" \"cd my-ssr && npm start\" \"cd vite-child && npm run dev\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
