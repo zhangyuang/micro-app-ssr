@@ -1,4 +1,4 @@
 module.exports = {
-  mode: 'csr',
+  // mode: 'csr',
   publicPath: 'http://localhost:3000'
 }

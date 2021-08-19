@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <micro-app name='app1' inline disableSandbox url='http://localhost:3002/'></micro-app>
-    <micro-app name='app2' inline disableSandbox url='http://localhost:3000'></micro-app>
+    <micro-app name='app2'   url='http://localhost:3000'></micro-app>
   </div>
 </template>
 
