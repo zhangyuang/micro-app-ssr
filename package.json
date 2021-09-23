@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "init": "yarn && concurrently \"cd hello-world && yarn\" \"cd my-ssr && yarn\" ",
-    "dev": "concurrently \"cd hello-world && npm run serve\" \"cd my-ssr && npm start\""
+    "dev": "concurrently \"cd hello-world && npm run serve\" \"cd my-ssr && npm start\"",
+    "prod": "concurrently \"cd hello-world && npm run build && cd dist && http-server -p 8080 ./\" \"cd my-ssr && npm run prod\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^6.2.1"
+    "concurrently": "^6.2.1",
+    "http-server": "^13.0.2"
   }
 }
