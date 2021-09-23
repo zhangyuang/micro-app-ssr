@@ -14,6 +14,7 @@ async function bootstrap (): Promise<void> {
     origin: true
   })
   app.useStaticAssets(join(getCwd(), './build'))
+  app.setGlobalPrefix('/children')
   const { serverPort } = loadConfig()
   await app.listen(serverPort)
 }

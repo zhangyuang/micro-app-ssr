@@ -1,4 +1,4 @@
 module.exports = {
-  // mode: 'csr',
+  prefix: '/children',
   publicPath: 'http://localhost:3000'
 }
