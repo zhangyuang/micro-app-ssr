@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      我是主应用首页123
+      我是主应用首页
     </div>
     <button @click="toDetail">
       btn
