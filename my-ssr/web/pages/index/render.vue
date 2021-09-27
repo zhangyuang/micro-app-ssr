@@ -1,6 +1,9 @@
 
 <template>
   <div>
+    <div>
+      我是子应用首页
+    </div>
     <Search />
     <template v-if="indexData">
       <Slider :data="indexData[0].components" />

@@ -1,6 +1,9 @@
 
 <template>
   <div>
+    <div>
+      我是子应用详情页
+    </div>
     <Search />
     <template v-if="detailData">
       <Player :data="detailData.data[0].dataNode" />
@@ -33,7 +36,7 @@ export default {
     })
   },
   mounted () {
-    console.log('xxx')
+
   }
 }
 </script>
