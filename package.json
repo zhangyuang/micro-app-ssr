@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "yarn && concurrently \"cd hello-world && yarn\" \"cd my-ssr && yarn\" ",
-    "clean": "concurrently \"cd hello-world && rm -rf node_modules yarn.lock\" \"cd my-ssr && rm -rf node_modules yarn.lock\" ",
-    "dev": "concurrently \"cd hello-world && npm run serve\" \"cd my-ssr && npm start\"",
-    "prod": "concurrently \"cd hello-world && npm run build && cd dist && http-server -p 8080 ./\" \"cd my-ssr && npm run prod\""
+    "init": "yarn && concurrently \"cd main && yarn\" \"cd children && yarn\" ",
+    "clean": "concurrently \"cd main && rm -rf node_modules yarn.lock\" \"cd children && rm -rf node_modules yarn.lock\" ",
+    "dev": "concurrently \"cd main && npm run serve\" \"cd children && npm start\"",
+    "prod": "concurrently \"cd main && npm run build && cd dist && http-server -p 8080 ./\" \"cd children && npm run prod\""
   },
   "author": "",
   "license": "ISC",
