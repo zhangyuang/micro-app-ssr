@@ -20,7 +20,5 @@ import Rectangle from '@/components/rectangle/index.vue'
 import Search from '@/components/search/index.vue'
 
 const indexData = mapState<IndexData>().indexStore.value.data
-if (__isBrowser__) {
-  console.log(window.prefix)
-}
+
 </script>

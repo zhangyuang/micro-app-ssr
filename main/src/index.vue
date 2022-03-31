@@ -15,7 +15,7 @@ export default {
   name: 'index',
   methods: {
     toChildren () {
-      this.$router.push('/children')
+      this.$router.push('/main/children')
     }
   }
 }

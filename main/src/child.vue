@@ -13,13 +13,8 @@ export default {
             path: ''
         }
     },
-    methods: {
-        toDetail() {
-            this.$router.push('/detail/cbba934b14f747049187')
-        }
-    },
     created() {
-        this.path = `http://127.0.0.1:3000${this.$route.path}`
+        this.path = `http://127.0.0.1:3000${this.$route.path.replace('/main', '')}`
     }
 }
 </script>

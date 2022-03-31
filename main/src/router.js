@@ -10,10 +10,9 @@ const routes = [
   {
     path: '/', 
     component: Index,
-    
   },
   {
-    path: '/children/:page*',
+    path: '/main/children/:page*',
     component: Child,
   },
 ]
