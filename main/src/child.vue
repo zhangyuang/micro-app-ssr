@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>我是子应用</div>
-        <micro-app name="app1" :url="path"></micro-app>
+        <micro-app name="app1" :url="path" ></micro-app>
     </div>
 </template>
 
