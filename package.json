@@ -6,8 +6,7 @@
   "scripts": {
     "init": "yarn && concurrently \"cd main && yarn\" \"cd children && yarn\" ",
     "clean": "concurrently \"cd main && rm -rf node_modules yarn.lock\" \"cd children && rm -rf node_modules yarn.lock\" ",
-    "dev": "concurrently \"cd main && npm run serve\" \"cd children && npm start\"",
-    "prod": "concurrently \"cd main && npm run build && cd dist && http-server -p 8080 ./\" \"cd children && npm run prod\""
+    "dev": "concurrently \"cd main && npm run serve\" \"cd children && npm start\""
   },
   "author": "",
   "license": "ISC",
