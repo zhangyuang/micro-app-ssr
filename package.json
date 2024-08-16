@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "yarn && concurrently \"cd main && yarn\" \"cd children && yarn\" ",
-    "clean": "concurrently \"cd main && rm -rf node_modules yarn.lock\" \"cd children && rm -rf node_modules yarn.lock\" ",
-    "dev": "concurrently \"cd main && npm run serve\" \"cd children && npm start\""
+    "init": "yarn && concurrently \"cd main && yarn\" \"cd children && yarn\" \"cd main-ssr && yarn\" ",
+    "clean": "concurrently \"cd main && rm -rf node_modules yarn.lock\" \"cd children && rm -rf node_modules yarn.lock\" \"cd main-ssr && rm -rf node_modules yarn.lock\" ",
+    "dev": "concurrently \"cd main && npm run serve\" \"cd children && npm start\"",
+    "dev:ssr": "concurrently \"cd main-ssr && npm start\" \"cd children && npm start\""
   },
   "author": "",
   "license": "ISC",
