@@ -11,6 +11,11 @@ $ yarn && yarn run init && yarn dev
 $ open http://localhost:8080
 ```
 
+项目提供了两个 demo，分别是 `main` 和 `main-ssr`，分别代表主应用为普通的 vue 但页面应用和主应用使用 ssr 框架的场景。
+
+open http://localhost:8080/main/children/ when you run `npm run dev`
+open http://127.0.0.1:3001/main/children/ when you run `npm run dev:ssr`
+
 ## 用法分析
 
 这里我们为了贴近真实的线上应用需要用微前端的情况设计了这个初始 `Demo`, 这里讨论的是主应用与子应用部署在相同域名的情况，如果是非相同域名，则处理起来更加的简单。
