@@ -13,6 +13,7 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from 'vue'
 import { mapState } from 'ssr-hoc-vue3'
 import { IndexData } from '~/typings/data'
 import Slider from '@/components/slider/index.vue'
@@ -21,5 +22,7 @@ import Search from '@/components/search/index.vue'
 
 const indexData = mapState<IndexData>().indexStore.value.data
 
+onMounted(() => {
 
+})
 </script>

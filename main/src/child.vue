@@ -3,7 +3,7 @@
         <div @click="change">我是子应用</div>
         <!-- <div @click="change2">我是子应用2</div> -->
         <micro-app :name="name" :url="path" ></micro-app>
-         <micro-app :name="name + 1" :url="path" ></micro-app>
+        <micro-app :name="name + 1" :url="path" ></micro-app>
     </div>
 </template>
 

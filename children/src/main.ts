@@ -5,13 +5,20 @@ import { initialSSRDevProxy, loadConfig, getCwd } from 'ssr-server-utils'
 
 import { AppModule } from './app.module'
 
-async function bootstrap (): Promise<void> {
+async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule)
   await initialSSRDevProxy(app, {
     express: true
   })
-  app.useStaticAssets(join(getCwd(), './build'))
-  app.useStaticAssets(join(getCwd(), './build/client'))
+  const options = {
+    setHeaders: (res) => {
+      res.setHeader('Access-Control-Allow-Origin', '*')
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With')
+    }
+  }
+  app.useStaticAssets(join(getCwd(), './build'), options)
+  app.useStaticAssets(join(getCwd(), './build/client'), options)
   app.useStaticAssets(join(getCwd(), './public'))
   app.setGlobalPrefix('/children')
   const { serverPort } = loadConfig()
