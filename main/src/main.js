@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import microApp from '@micro-zoe/micro-app';
+import microApp from '@yuuang/micro-app';
 import routes from './router'
 
 Vue.config.productionTip = false
