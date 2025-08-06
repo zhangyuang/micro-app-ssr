@@ -1,16 +1,16 @@
 import { Controller, Get, Req, Res } from '@nestjs/common'
 import { Request, Response } from 'express'
 import { Readable } from 'stream'
-import { render } from 'ssr-core-vue3'
+import { render } from 'ssr-core'
 
 import { ApiDetailService } from './detail.service'
 
 @Controller('/')
 export class DetailController {
-  constructor (private readonly apiDeatilservice: ApiDetailService) {}
+  constructor(private readonly apiDeatilservice: ApiDetailService) { }
 
   @Get('/detail/:id')
-  async handlerDetail (@Req() req: Request, @Res() res: Response): Promise<any> {
+  async handlerDetail(@Req() req: Request, @Res() res: Response): Promise<any> {
     try {
       const ctx = {
         request: req,

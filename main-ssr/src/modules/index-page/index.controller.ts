@@ -1,16 +1,16 @@
 import { Controller, Get, Req, Res } from '@nestjs/common'
 import { Request, Response } from 'express'
 import { Readable } from 'stream'
-import { render } from 'ssr-core-vue3'
+import { render } from 'ssr-core'
 
 import { ApiService } from './index.service'
 
 @Controller('/main/children/*')
 export class AppController {
-  constructor (private readonly apiService: ApiService) {}
+  constructor(private readonly apiService: ApiService) { }
 
   @Get('/')
-  async handlerIndex (@Req() req: Request, @Res() res: Response): Promise<any> {
+  async handlerIndex(@Req() req: Request, @Res() res: Response): Promise<any> {
     try {
       const ctx = {
         request: req,
